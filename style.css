@@ -1,16 +1,18 @@
-/* Modern Academic Website Styles */
+/* Academic Research Lab Theme */
 :root {
-    --primary-color: #990000;  /* IU Crimson */
-    --secondary-color: #7D110C;
-    --accent-color: #E8E9EB;
-    --text-color: #252525;
-    --light-bg: #f8f9fa;
-    --font-primary: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --primary-red: #990000;     /* IU Crimson */
+    --dark-red: #800000;        /* Darker red for hover */
+    --accent-red: #CC0000;      /* Lighter red for accents */
+    --dark-bg: #1a1a1a;         /* Dark background */
+    --text-light: #ffffff;      /* Light text */
+    --text-dark: #333333;       /* Dark text */
+    --gray-light: #f5f5f5;      /* Light gray for sections */
+    --gray-medium: #e0e0e0;     /* Medium gray for borders */
+    --font-primary: 'Source Sans Pro', sans-serif;
     --font-headers: 'Georgia', serif;
-    --spacing-unit: 1rem;
 }
 
-/* Base Styles */
+/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -20,155 +22,170 @@
 body {
     font-family: var(--font-primary);
     line-height: 1.6;
-    color: var(--text-color);
+    color: var(--text-dark);
     background-color: white;
 }
 
-/* Typography */
-h1, h2, h3, h4 {
-    font-family: var(--font-headers);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-    color: var(--primary-color);
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-h2 {
-    font-size: 2rem;
-    color: var(--secondary-color);
-}
-
-p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-}
-
-/* Layout */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-unit);
-}
-
 /* Header & Navigation */
-.site-header {
-    background: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.header {
+    background: var(--dark-bg);
+    padding: 1rem 0;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
 }
 
 .logo {
-    font-family: var(--font-headers);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
+    color: var(--text-light);
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: var(--font-headers);
+}
+
+.logo span {
+    color: var(--primary-red);
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     list-style: none;
 }
 
-.nav-links a {
-    color: var(--text-color);
+.nav-button {
+    background-color: transparent;
+    color: var(--text-light);
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--primary-red);
+    border-radius: 4px;
     text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 0;
-    position: relative;
-    transition: color 0.3s;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    transition: width 0.3s;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
+.nav-button:hover {
+    background-color: var(--primary-red);
+    transform: translateY(-2px);
 }
 
 /* Hero Section */
 .hero {
-    background-color: var(--light-bg);
-    padding: 4rem 0;
-    margin-bottom: 3rem;
+    background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)), 
+                url('/images/research-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+    padding: 6rem 0;
+    text-align: center;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
+    padding: 0 2rem;
 }
 
 .hero h1 {
+    font-size: 3rem;
     margin-bottom: 1.5rem;
+    color: var(--text-light);
 }
 
 .hero p {
     font-size: 1.25rem;
-    color: #666;
+    margin-bottom: 2rem;
+    color: var(--gray-light);
 }
 
-/* Main Content */
-.main-content {
-    padding: 3rem 0;
-}
-
+/* Main Content Sections */
 .section {
-    margin-bottom: 4rem;
+    padding: 4rem 0;
 }
 
-/* Cards */
-.card {
+.section-dark {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.content-card {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     padding: 2rem;
     margin-bottom: 2rem;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid var(--primary-red);
+    transition: transform 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+.content-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-headers);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-red);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-red);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--dark-red);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* Footer */
-.site-footer {
-    background-color: var(--light-bg);
+.footer {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
     padding: 3rem 0;
-    margin-top: 4rem;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--primary-red);
+    margin-bottom: 1rem;
 }
 
 /* Responsive Design */
@@ -180,15 +197,11 @@ p {
     
     .nav-links {
         flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+        width: 100%;
+        text-align: center;
     }
     
-    .hero {
-        padding: 2rem 0;
-    }
-    
-    h1 {
-        font-size: 2rem;
+    .hero h1 {
+        font-size: 2.5rem;
     }
 }
