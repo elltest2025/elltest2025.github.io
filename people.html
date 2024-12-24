@@ -4,109 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People - Econometric Learning Lab (ELL)</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo">ELL<span>@IU</span></a>
-            <ul class="nav-links">
-                <li><a href="about.html" class="nav-button">About</a></li>
-                <li><a href="people.html" class="nav-button">People</a></li>
-                <li><a href="activities.html" class="nav-button">Activities</a></li>
-                <li><a href="contact.html" class="nav-button">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <a href="/" class="logo-text">ELL<span>@IU</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/about" class="nav-button">About</a></li>
+                    <li><a href="/people" class="nav-button">People</a></li>
+                    <li><a href="/activities" class="nav-button">Activities</a></li>
+                    <li><a href="/contact" class="nav-button">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
+    <section class="banner">
+        <div class="banner-content">
             <h1>Our People</h1>
             <p>Meet the Team Behind ELL</p>
         </div>
     </section>
 
-    <main>
-        <section class="section">
-            <div class="container">
-                <div class="content-card">
-                    <h2>Directors</h2>
-                    <div class="people-grid">
-                        <div class="person-card">
-                            <h3>Joon Park</h3>
-                            <p>Director</p>
-                            <a href="#" class="btn">View Profile</a>
-                        </div>
-                        <div class="person-card">
-                            <h3>Yoosoon Chang</h3>
-                            <p>Director</p>
-                            <a href="#" class="btn">View Profile</a>
-                        </div>
-                    </div>
+    <main class="main-content">
+        <div class="content-section">
+            <h2>Directors</h2>
+            <div class="people-grid">
+                <div class="person-card">
+                    <h3>Joon Y. Park</h3>
+                    <p>Director</p>
+                    <p>Department of Economics</p>
+                    <p>Indiana University</p>
+                    <a href="#" class="profile-link">View Profile</a>
                 </div>
-
-                <div class="content-card">
-                    <h2>Student Fellows</h2>
-                    <div class="people-grid">
-                        <div class="person-card">
-                            <h3>Sangmyung Ha</h3>
-                            <p>Student Fellow</p>
-                        </div>
-                        <div class="person-card">
-                            <h3>Ali</h3>
-                            <p>Student Fellow</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-card">
-                    <h2>Collaborators</h2>
-                    <div class="collaborator-section">
-                        <div class="collaborator-card">
-                            <h3>Kosali Simon</h3>
-                            <p>O'Neil School of Public Policy, Indiana University</p>
-                            <p><strong>Project:</strong> COVID Mortality Prediction Pre and Post Vaccine Availability</p>
-                        </div>
-
-                        <div class="collaborator-card">
-                            <h3>Steven N. Durlauf</h3>
-                            <p>Harris School of Public Policy, University of Chicago</p>
-                            <p><strong>Project:</strong> A Conditional Markov Chain Model for Intergenerational Income Mobility</p>
-                        </div>
-
-                        <div class="collaborator-card">
-                            <h3>Yongok Choi</h3>
-                            <p>Choong-Ang University</p>
-                            <p><strong>Project:</strong> Using Machine Learning to Identify Climate-Driven Fluctuations</p>
-                        </div>
-                    </div>
+                <div class="person-card">
+                    <h3>Yoosoon Chang</h3>
+                    <p>Director</p>
+                    <p>Department of Economics</p>
+                    <p>Indiana University</p>
+                    <a href="#" class="profile-link">View Profile</a>
                 </div>
             </div>
-        </section>
+
+            <h2>Student Fellows</h2>
+            <div class="people-grid">
+                <div class="person-card">
+                    <h3>Sangmyung Ha</h3>
+                    <p>Student Fellow</p>
+                    <p>Indiana University</p>
+                </div>
+                <div class="person-card">
+                    <h3>Ali</h3>
+                    <p>Student Fellow</p>
+                    <p>Indiana University</p>
+                </div>
+            </div>
+
+            <h2>Collaborators</h2>
+            <div class="collaborator-section">
+                <div class="collaborator-card">
+                    <h3>Kosali Simon</h3>
+                    <p class="institution">O'Neil School of Public Policy, Indiana University</p>
+                    <p class="project-title">Project: COVID Mortality Prediction Pre and Post Vaccine Availability</p>
+                    <p class="collaborators">With: Yoosoon Chang, Sangmyung Ha, Joon Y. Park</p>
+                </div>
+
+                <div class="collaborator-card">
+                    <h3>Steven N. Durlauf</h3>
+                    <p class="institution">Harris School of Public Policy, University of Chicago</p>
+                    <p class="project-title">Project: A Conditional Markov Chain Model for Intergenerational Income Mobility</p>
+                    <p class="collaborators">With: Yoosoon Chang, Bo Hu, Joon Y. Park</p>
+                </div>
+
+                <div class="collaborator-card">
+                    <h3>Yongok Choi</h3>
+                    <p class="institution">Choong-Ang University</p>
+                    <p class="project-title">Project: Using Machine Learning to Identify Climate-Driven Fluctuations</p>
+                    <p class="collaborators">With: Yoosoon Chang, Joon Y. Park</p>
+                </div>
+            </div>
+        </div>
+
+        <aside class="news-section">
+            <h2>Latest News</h2>
+            <div class="news-item">
+                <span class="news-date">December 15, 2024</span>
+                <h3>Upcoming Workshop</h3>
+                <p>Registration open for Winter 2025 Machine Learning Workshop</p>
+            </div>
+        </aside>
     </main>
 
     <footer class="footer">
-        <div class="container footer-content">
+        <!-- Footer content same as other pages -->
+        <div class="footer-content">
             <div class="footer-section">
-                <h3>Contact</h3>
-                <p>Department of Economics</p>
-                <p>Indiana University</p>
-                <p>Bloomington, IN</p>
+                <h3>About ELL</h3>
+                <p>Advancing economic research through innovative methodologies at Indiana University.</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="people.html">People</a></li>
-                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/team">Our Team</a></li>
+                    <li><a href="/activities">Research Activities</a></li>
+                    <li><a href="/publications">Publications</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Department of Economics</li>
+                    <li>Indiana University</li>
+                    <li>Bloomington, IN 47405</li>
+                    <li>Email: ell@iu.edu</li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Connect</h3>
-                <p>&copy; 2024 Econometric Learning Lab</p>
-                <p>Indiana University</p>
+                <ul>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
             </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Econometric Learning Lab - Indiana University. All rights reserved.</p>
         </div>
     </footer>
 </body>
