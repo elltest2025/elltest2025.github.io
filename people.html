@@ -4,196 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People - Econometric Learning Lab (ELL)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
-        <div class="header-container">
-            <a href="/" class="logo-text">ELL<span>@IU</span></a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="/about" class="nav-button">About</a></li>
-                    <li><a href="/people" class="nav-button">People</a></li>
-                    <li><a href="/activities" class="nav-button">Activities</a></li>
-                    <li><a href="/contact" class="nav-button">Contact</a></li>
+        <div class="container">
+            <a href="/" class="logo">ELL<span>@IU</span></a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="people.html" class="active">People</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="main-content">
-        <h1>Our Team</h1>
-        <p>Meet the Researchers and Collaborators at ELL</p>
-
-        <!-- Directors Section -->
-        <section class="people-section">
-            <h2>Directors</h2>
-            <div class="people-grid">
-                <div class="profile-card">
-                    <div class="profile-image-container">
-                        <div class="no-image"></div>
-                    </div>
-                    <div class="profile-info">
-                        <h3>Joon Y. Park</h3>
-                        <div class="profile-title">Director, Professor</div>
-                        <div class="profile-details">
-                            <p>Department of Economics</p>
-                            <p>Indiana University</p>
+    <main class="main">
+        <div class="container">
+            <h1 class="page-title">Our Team</h1>
+            
+            <!-- Directors Section -->
+            <section class="people-section">
+                <h2 class="section-title">Directors</h2>
+                <div class="profile-grid">
+                    <div class="profile-card">
+                        <div class="profile-image"></div>
+                        <div class="profile-content">
+                            <h3>Joon Y. Park</h3>
+                            <div class="profile-title">Director, Professor</div>
+                            <div class="profile-info">
+                                <p>Department of Economics</p>
+                                <p>Indiana University</p>
+                            </div>
+                            <div class="profile-research">
+                                <h4>Research Interests:</h4>
+                                <p>Econometric Theory, Time Series Analysis, Financial Economics</p>
+                            </div>
                         </div>
-                        <div class="profile-interests">
-                            <strong>Research Interests:</strong>
-                            <p>Econometric Theory, Time Series Analysis, Financial Economics</p>
+                    </div>
+
+                    <div class="profile-card">
+                        <div class="profile-image"></div>
+                        <div class="profile-content">
+                            <h3>Yoosoon Chang</h3>
+                            <div class="profile-title">Director, Professor</div>
+                            <div class="profile-info">
+                                <p>Department of Economics</p>
+                                <p>Indiana University</p>
+                            </div>
+                            <div class="profile-research">
+                                <h4>Research Interests:</h4>
+                                <p>Machine Learning in Economics, Time Series Econometrics</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="profile-card">
-                    <div class="profile-image-container">
-                        <div class="no-image"></div>
-                    </div>
-                    <div class="profile-info">
-                        <h3>Yoosoon Chang</h3>
-                        <div class="profile-title">Director, Professor</div>
-                        <div class="profile-details">
-                            <p>Department of Economics</p>
-                            <p>Indiana University</p>
+            <!-- Student Fellows Section -->
+            <section class="people-section">
+                <h2 class="section-title">Student Fellows</h2>
+                <div class="profile-grid">
+                    <div class="profile-card">
+                        <div class="profile-image"></div>
+                        <div class="profile-content">
+                            <h3>Sangmyung Ha</h3>
+                            <div class="profile-title">Graduate Student Fellow</div>
+                            <div class="profile-info">
+                                <p>PhD Candidate</p>
+                                <p>Department of Economics</p>
+                                <p>Indiana University</p>
+                            </div>
                         </div>
-                        <div class="profile-interests">
-                            <strong>Research Interests:</strong>
-                            <p>Machine Learning in Economics, Time Series Econometrics</p>
+                    </div>
+
+                    <div class="profile-card">
+                        <div class="profile-image"></div>
+                        <div class="profile-content">
+                            <h3>Ali</h3>
+                            <div class="profile-title">Graduate Student Fellow</div>
+                            <div class="profile-info">
+                                <p>PhD Candidate</p>
+                                <p>Department of Economics</p>
+                                <p>Indiana University</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Collaborators Section -->
-        <section class="people-section" style="width: 100%;">
-            <h2>Research Collaborators</h2>
-            <div class="collaborator-grid" style="width: 100%; max-width: none;">
-                <div class="collaborator-card">
-                    <h3>Kosali Simon</h3>
-                    <div class="collaborator-info">
-                        <p class="institution">O'Neil School of Public Policy, Indiana University</p>
-                        <div class="project-info">
-                            <p class="project-title">Project: COVID Mortality Prediction Pre and Post Vaccine Availability</p>
-                            <p class="collaborators">With: Yoosoon Chang, Sangmyung Ha, Joon Y. Park</p>
+            <!-- Collaborators Section -->
+            <section class="people-section">
+                <h2 class="section-title">Research Collaborators</h2>
+                <div class="collaborator-grid">
+                    <div class="collaborator-card">
+                        <h3>Kosali Simon</h3>
+                        <div class="collaborator-info">
+                            <p class="institution">O'Neil School of Public Policy, Indiana University</p>
+                            <div class="project">
+                                <h4>Project:</h4>
+                                <p>COVID Mortality Prediction Pre and Post Vaccine Availability</p>
+                                <p class="collaborators">With: Yoosoon Chang, Sangmyung Ha, Joon Y. Park</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="collaborator-card">
-                    <h3>Steven N. Durlauf</h3>
-                    <div class="collaborator-info">
-                        <p class="institution">Harris School of Public Policy, University of Chicago</p>
-                        <div class="project-info">
-                            <p class="project-title">Project: A Conditional Markov Chain Model for Intergenerational Income Mobility</p>
-                            <p class="collaborators">With: Yoosoon Chang, Bo Hu, Joon Y. Park</p>
+                    <div class="collaborator-card">
+                        <h3>Steven N. Durlauf</h3>
+                        <div class="collaborator-info">
+                            <p class="institution">Harris School of Public Policy, University of Chicago</p>
+                            <div class="project">
+                                <h4>Project:</h4>
+                                <p>A Conditional Markov Chain Model for Intergenerational Income Mobility</p>
+                                <p class="collaborators">With: Yoosoon Chang, Bo Hu, Joon Y. Park</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="collaborator-card">
-                    <h3>Yongok Choi</h3>
-                    <div class="collaborator-info">
-                        <p class="institution">Choong-Ang University</p>
-                        <div class="project-info">
-                            <p class="project-title">Project: Using Machine Learning to Identify Climate-Driven Fluctuations</p>
-                            <p class="collaborators">With: Yoosoon Chang, Joon Y. Park</p>
-                        </div>
-                    </div>
+                    <!-- Add more collaborator cards here -->
                 </div>
-
-                <div class="collaborator-card">
-                    <h3>Soohun Kim</h3>
-                    <div class="collaborator-info">
-                        <p class="institution">Korea Advanced Institute of Science and Technology</p>
-                        <div class="project-info">
-                            <p class="project-title">Project: Stock Market Return Predictability Dormant in Option Panels</p>
-                            <p class="collaborators">With: Yoosoon Chang, Youngmin Choi, Joon Y. Park</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="collaborator-card">
-                    <h3>Guo Yan</h3>
-                    <div class="collaborator-info">
-                        <p class="institution">University of Melbourne</p>
-                        <div class="project-info">
-                            <p class="project-title">Project: Using SVM to Estimate and Predict Large Dimensional Binary Choice Models</p>
-                            <p class="collaborators">With: Yoosoon Chang, Joon Y. Park</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Student Fellows Section -->
-        <section class="people-section">
-            <h2>Student Fellows</h2>
-            <div class="people-grid">
-                <div class="profile-card">
-                    <div class="profile-image-container">
-                        <div class="no-image"></div>
-                    </div>
-                    <div class="profile-info">
-                        <h3>Sangmyung Ha</h3>
-                        <div class="profile-title">Graduate Student Fellow</div>
-                        <div class="profile-details">
-                            <p>PhD Candidate</p>
-                            <p>Department of Economics</p>
-                            <p>Indiana University</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="profile-card">
-                    <div class="profile-image-container">
-                        <div class="no-image"></div>
-                    </div>
-                    <div class="profile-info">
-                        <h3>Ali</h3>
-                        <div class="profile-title">Graduate Student Fellow</div>
-                        <div class="profile-details">
-                            <p>PhD Candidate</p>
-                            <p>Department of Economics</p>
-                            <p>Indiana University</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About ELL</h3>
-                <p>Advancing economic research through innovative methodologies at Indiana University.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About ELL</h3>
+                    <p>Advancing economic research through innovative methodologies at Indiana University.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="people.html">Our Team</a></li>
+                        <li><a href="activities.html">Research Activities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Department of Economics</li>
+                        <li>Indiana University</li>
+                        <li>Bloomington, IN 47405</li>
+                        <li>Email: ell@iu.edu</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="social-links">
+                        <li><a href="#" class="linkedin">LinkedIn</a></li>
+                        <li><a href="#" class="twitter">Twitter</a></li>
+                        <li><a href="#" class="github">GitHub</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/people">Our Team</a></li>
-                    <li><a href="/activities">Research Activities</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <ul>
-                    <li>Department of Economics</li>
-                    <li>Indiana University</li>
-                    <li>Bloomington, IN 47405</li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect</h3>
-                <ul>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">GitHub</a></li>
-                </ul>
+            <div class="copyright">
+                <p>&copy; 2024 Econometric Learning Lab - Indiana University. All rights reserved.</p>
             </div>
         </div>
     </footer>
