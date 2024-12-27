@@ -3,153 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Econometric Learning Lab</title>
-    <link rel="stylesheet" href="css/globals.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Contact Us - Econometric Learning Lab</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
+        .contact-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 2rem;
         }
-        .contact-info {
-            background-color: var(--iu-light-gray);
+
+        .contact-form {
+            background: white;
             padding: 2rem;
             border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .info-item {
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
             margin-bottom: 1.5rem;
         }
-        .info-item h3 {
-            color: var(--iu-crimson);
+
+        .form-group label {
+            display: block;
             margin-bottom: 0.5rem;
+            font-weight: 500;
         }
-        .required {
-            color: var(--iu-crimson);
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
         }
-        textarea {
-            min-height: 150px;
+
+        .form-group textarea {
+            height: 150px;
             resize: vertical;
+        }
+
+        .submit-button {
+            background-color: #9b2242;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #7c1c35;
+        }
+
+        .contact-info h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: #666;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Header Navigation -->
     <header class="header">
-        <nav class="nav container">
-            <a href="/" class="nav-logo">ELL</a>
+        <nav class="nav">
+            <a href="index.html" class="logo">ELL</a>
             <div class="nav-links">
-                <a href="/activities.html" class="nav-link">Activities</a>
-                <a href="/people.html" class="nav-link">People</a>
-                <a href="/about.html" class="nav-link">About</a>
-                <a href="/contact.html" class="nav-link">Contact</a>
+                <a href="activities.html">Activities</a>
+                <a href="people.html">People</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="container">
-        <h1 class="hero-title" style="color: var(--iu-crimson); margin: 2rem 0;">Contact Us</h1>
-
-        <div class="grid grid-2" style="gap: 3rem;">
-            <!-- Contact Form Section -->
-            <section class="card">
-                <h2 class="card-title">Send us a message</h2>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name" class="label">Name <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" class="input" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email" class="label">Email <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" class="input" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject" class="label">Subject <span class="required">*</span></label>
-                        <input type="text" id="subject" name="subject" class="input" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message" class="label">Message <span class="required">*</span></label>
-                        <textarea id="message" name="message" class="textarea" required></textarea>
-                    </div>
-
-                    <button type="submit" class="button">Send Message</button>
-                </form>
-            </section>
-
-            <!-- Contact Information Section -->
-            <section>
-                <div class="card contact-info">
-                    <h2 class="card-title">Contact Information</h2>
-                    
-                    <div class="info-item">
-                        <h3>Address</h3>
-                        <p>Department of Economics<br>
-                        Indiana University<br>
-                        100 S Woodlawn Ave<br>
-                        Bloomington, IN 47405</p>
-                    </div>
-
-                    <div class="info-item">
-                        <h3>Email</h3>
-                        <p>contact@ell-lab.edu</p>
-                    </div>
-
-                    <div class="info-item">
-                        <h3>Phone</h3>
-                        <p>+1 (812) 855-0000</p>
-                    </div>
-
-                    <div class="info-item">
-                        <h3>Office Hours</h3>
-                        <p>Monday - Friday<br>
-                        9:00 AM - 5:00 PM EST</p>
-                    </div>
-                </div>
-
-                <!-- Map Placeholder -->
-                <div class="card" style="margin-top: 2rem;">
-                    <h2 class="card-title">Location</h2>
-                    <div style="background-color: var(--iu-light-gray); height: 300px; display: flex; align-items: center; justify-content: center;">
-                        <p>Map Interface Placeholder</p>
-                    </div>
-                </div>
-            </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our team</p>
         </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="contact-container">
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h2>Send us a message</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Visit Us -->
+        <section class="contact-info">
+            <h2>Visit Us</h2>
+            
+            <div class="info-group">
+                <h3>Address</h3>
+                <p>Department of Economics</p>
+                <p>University Name</p>
+                <p>Street Address</p>
+                <p>City, State ZIP</p>
+            </div>
+
+            <div class="info-group">
+                <h3>Email</h3>
+                <p>contact@ell-lab.edu</p>
+            </div>
+
+            <div class="info-group">
+                <h3>Phone</h3>
+                <p>+1 (123) 456-7890</p>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h3 class="footer-title">Econometric Learning Lab</h3>
-                    <p>Advancing economic research through innovative methodologies</p>
-                </div>
-                <div>
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul>
-                        <li><a href="/activities.html" class="footer-link">Activities</a></li>
-                        <li><a href="/people.html" class="footer-link">People</a></li>
-                        <li><a href="/about.html" class="footer-link">About</a></li>
-                        <li><a href="/contact.html" class="footer-link">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="footer-title">Connect</h3>
-                    <ul>
-                        <li><a href="#" class="footer-link">Twitter</a></li>
-                        <li><a href="#" class="footer-link">LinkedIn</a></li>
-                        <li><a href="#" class="footer-link">Email Newsletter</a></li>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Econometric Learning Lab</h3>
+                <p>Advancing economic research through innovative methodologies</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Econometric Learning Lab. All rights reserved.</p>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul class="footer-links">
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">LinkedIn</a></li>
+                    <li><a href="#" target="_blank">Email Newsletter</a></li>
+                </ul>
             </div>
         </div>
+
+        <div class="copyright">
+            <p>&copy; 2024 Econometric Learning Lab. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Message sent successfully!');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
