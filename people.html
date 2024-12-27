@@ -3,161 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>People - Econometric Learning Lab (ELL)</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>People - Econometric Learning Lab</title>
+    <link rel="stylesheet" href="css/globals.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .people-card {
+            transition: transform 0.2s;
+        }
+        .people-card:hover {
+            transform: translateY(-5px);
+        }
+        .section-title {
+            color: var(--iu-crimson);
+            margin: 3rem 0 1.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--iu-crimson);
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .profile-role {
+            color: var(--iu-crimson);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin: 0.5rem 0;
+        }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .social-link {
+            color: var(--iu-dark-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .social-link:hover {
+            color: var(--iu-crimson);
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header>
-        <nav class="container nav-container">
-            <a href="index.html" class="logo">ELL</a>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="nav-logo">ELL</a>
             <div class="nav-links">
-                <a href="activities.html">Activities</a>
-                <a href="people.html" style="color: var(--crimson);">People</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="/activities.html" class="nav-link">Activities</a>
+                <a href="/people.html" class="nav-link">People</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
             </div>
         </nav>
     </header>
 
-    <!-- Page Title -->
-    <section class="hero" style="padding: 2rem 0;">
-        <div class="container">
-            <h1>Our Team</h1>
-            <p>Meet the researchers and collaborators at the Econometric Learning Lab</p>
-        </div>
-    </section>
-
     <!-- Main Content -->
-    <main class="container py-5">
+    <main class="container">
+        <h1 class="hero-title" style="color: var(--iu-crimson); margin: 2rem 0;">Our Team</h1>
+
         <!-- Directors Section -->
-        <section class="mb-5">
-            <h2 class="mb-4">Directors</h2>
-            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <div class="card">
-                    <img src="/api/placeholder/150/150" alt="Director 1" class="profile-image">
-                    <h3 class="mt-3">Director Name</h3>
-                    <p class="text-small" style="color: var(--crimson);">Lab Director</p>
-                    <p>Ph.D. in Economics, Research focus on econometric theory and applications.</p>
-                    <div class="mt-3">
-                        <a href="#" class="button button-ghost">View Profile</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="/api/placeholder/150/150" alt="Director 2" class="profile-image">
-                    <h3 class="mt-3">Co-Director Name</h3>
-                    <p class="text-small" style="color: var(--crimson);">Co-Director</p>
-                    <p>Ph.D. in Economics, Specializing in machine learning applications in economics.</p>
-                    <div class="mt-3">
-                        <a href="#" class="button button-ghost">View Profile</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Student Fellows Section -->
-        <section class="mb-5">
-            <h2 class="mb-4">Student Fellows</h2>
-            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                <div class="card">
-                    <img src="/api/placeholder/120/120" alt="Student 1" class="profile-image">
-                    <h3 class="mt-3">Student Name</h3>
-                    <p class="text-small" style="color: var(--crimson);">Ph.D. Candidate</p>
-                    <p>Research focus on applied econometrics and labor economics.</p>
-                </div>
-                <div class="card">
-                    <img src="/api/placeholder/120/120" alt="Student 2" class="profile-image">
-                    <h3 class="mt-3">Student Name</h3>
-                    <p class="text-small" style="color: var(--crimson);">Ph.D. Student</p>
-                    <p>Specializing in time series analysis and financial econometrics.</p>
-                </div>
-                <div class="card">
-                    <img src="/api/placeholder/120/120" alt="Student 3" class="profile-image">
-                    <h3 class="mt-3">Student Name</h3>
-                    <p class="text-small" style="color: var(--crimson);">Ph.D. Student</p>
-                    <p>Working on machine learning methods in econometrics.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Collaborators Section -->
         <section>
-            <h2 class="mb-4">Collaborators</h2>
-            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                <div class="card">
-                    <img src="/api/placeholder/120/120" alt="Collaborator 1" class="profile-image">
-                    <h3 class="mt-3">Collaborator Name</h3>
-                    <p class="text-small" style="color: var(--crimson);">Professor, University Name</p>
-                    <p>Research focus on econometric theory and causal inference.</p>
+            <h2 class="section-title">Directors</h2>
+            <div class="grid grid-2">
+                <div class="card people-card">
+                    <img src="images/placeholder-1.jpg" alt="Director 1" class="profile-image">
+                    <h3 class="card-title">Dr. Sarah Johnson</h3>
+                    <p class="profile-role">Director of Research</p>
+                    <p>Ph.D. in Economics from Stanford University. Specializes in econometric theory and machine learning applications in economics.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Research Profile</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="/api/placeholder/120/120" alt="Collaborator 2" class="profile-image">
-                    <h3 class="mt-3">Collaborator Name</h3>
-                    <p class="text-small" style="color: var(--crimson);">Associate Professor, University Name</p>
-                    <p>Specializing in panel data methods and microeconometrics.</p>
+                <div class="card people-card">
+                    <img src="images/placeholder-2.jpg" alt="Director 2" class="profile-image">
+                    <h3 class="card-title">Dr. Michael Chen</h3>
+                    <p class="profile-role">Director of Educational Programs</p>
+                    <p>Ph.D. in Economics from MIT. Focuses on empirical methods and economic policy analysis.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Research Profile</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="/api/placeholder/120/120" alt="Collaborator 3" class="profile-image">
-                    <h3 class="mt-3">Collaborator Name</h3>
-                    <p class="text-small" style="color: var(--crimson);">Research Scientist, Institution Name</p>
-                    <p>Expert in computational methods and high-dimensional statistics.</p>
+            </div>
+        </section>
+
+        <!-- Faculty Section -->
+        <section>
+            <h2 class="section-title">Faculty Members</h2>
+            <div class="grid grid-3">
+                <div class="card people-card">
+                    <img src="images/placeholder-3.jpg" alt="Faculty 1" class="profile-image">
+                    <h3 class="card-title">Dr. Emily Rodriguez</h3>
+                    <p class="profile-role">Associate Professor</p>
+                    <p>Specializes in time series econometrics</p>
+                </div>
+                <div class="card people-card">
+                    <img src="images/placeholder-4.jpg" alt="Faculty 2" class="profile-image">
+                    <h3 class="card-title">Dr. James Wilson</h3>
+                    <p class="profile-role">Assistant Professor</p>
+                    <p>Focuses on financial econometrics</p>
+                </div>
+                <div class="card people-card">
+                    <img src="images/placeholder-5.jpg" alt="Faculty 3" class="profile-image">
+                    <h3 class="card-title">Dr. Lisa Park</h3>
+                    <p class="profile-role">Associate Professor</p>
+                    <p>Research in panel data methods</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PhD Students Section -->
+        <section>
+            <h2 class="section-title">PhD Students</h2>
+            <div class="grid grid-3">
+                <div class="card people-card">
+                    <img src="images/placeholder-6.jpg" alt="Student 1" class="profile-image">
+                    <h3 class="card-title">Alex Thompson</h3>
+                    <p class="profile-role">4th Year PhD Student</p>
+                    <p>Research focus: Machine learning in econometrics</p>
+                </div>
+                <div class="card people-card">
+                    <img src="images/placeholder-7.jpg" alt="Student 2" class="profile-image">
+                    <h3 class="card-title">Maria Garcia</h3>
+                    <p class="profile-role">3rd Year PhD Student</p>
+                    <p>Research focus: Causal inference</p>
+                </div>
+                <div class="card people-card">
+                    <img src="images/placeholder-8.jpg" alt="Student 3" class="profile-image">
+                    <h3 class="card-title">David Kim</h3>
+                    <p class="profile-role">3rd Year PhD Student</p>
+                    <p>Research focus: Bayesian econometrics</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visiting Researchers Section -->
+        <section>
+            <h2 class="section-title">Visiting Researchers</h2>
+            <div class="grid grid-3">
+                <div class="card people-card">
+                    <img src="images/placeholder-9.jpg" alt="Visitor 1" class="profile-image">
+                    <h3 class="card-title">Dr. Anna Schmidt</h3>
+                    <p class="profile-role">University of Munich</p>
+                    <p>Visiting for Spring 2024</p>
+                </div>
+                <div class="card people-card">
+                    <img src="images/placeholder-10.jpg" alt="Visitor 2" class="profile-image">
+                    <h3 class="card-title">Dr. Thomas Lee</h3>
+                    <p class="profile-role">Seoul National University</p>
+                    <p>Visiting for Fall 2024</p>
+                </div>
+                <div class="card people-card">
+                    <img src="images/placeholder-11.jpg" alt="Visitor 3" class="profile-image">
+                    <h3 class="card-title">Dr. Sofia Costa</h3>
+                    <p class="profile-role">University of São Paulo</p>
+                    <p>Visiting for Summer 2024</p>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
+                <div>
+                    <h3 class="footer-title">Econometric Learning Lab</h3>
+                    <p>Advancing economic research through innovative methodologies</p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Quick Links</h3>
                     <ul>
-                        <li><a href="activities.html">Activities</a></li>
-                        <li><a href="people.html">People</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/activities.html" class="footer-link">Activities</a></li>
+                        <li><a href="/people.html" class="footer-link">People</a></li>
+                        <li><a href="/about.html" class="footer-link">About</a></li>
+                        <li><a href="/contact.html" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h3>Connect</h3>
+                <div>
+                    <h3 class="footer-title">Connect</h3>
                     <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Newsletter</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li>Department of Economics</li>
-                        <li>Indiana University</li>
-                        <li>Email: ell@indiana.edu</li>
+                        <li><a href="#" class="footer-link">Twitter</a></li>
+                        <li><a href="#" class="footer-link">LinkedIn</a></li>
+                        <li><a href="#" class="footer-link">Email Newsletter</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="text-center mt-5">
-                <p>&copy; 2024 Econometric Learning Lab, Indiana University. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Econometric Learning Lab. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <style>
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto;
-            display: block;
-            border: 3px solid var(--crimson);
-        }
-        
-        .text-small {
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-    </style>
 </body>
 </html>
