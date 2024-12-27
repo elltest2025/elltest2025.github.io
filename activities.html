@@ -4,150 +4,230 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activities - Econometric Learning Lab</title>
-    <link rel="stylesheet" href="css/globals.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        .activity-card {
-            margin-bottom: 1.5rem;
-            transition: transform 0.2s;
+        /* Additional styles specific to activities page */
+        .activity-section {
+            margin: 2rem auto;
+            max-width: 1000px;
         }
-        .activity-card:hover {
-            transform: translateY(-5px);
+
+        .activity-header {
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 1rem;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
         }
+
+        .activity-header:hover {
+            background: #f8f8f8;
+        }
+
+        .activity-header h2 {
+            margin: 0;
+            color: #9b2242;
+            font-size: 1.5rem;
+        }
+
+        .activity-content {
+            display: none;
+            padding: 0 1rem;
+        }
+
+        .activity-content.active {
+            display: block;
+        }
+
+        .activity-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .activity-item h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
         .activity-date {
-            color: var(--iu-crimson);
+            color: #666;
             font-size: 0.9rem;
-            font-weight: 500;
+            margin-bottom: 1rem;
         }
-        .section-title {
-            color: var(--iu-crimson);
-            margin: 3rem 0 1.5rem 0;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--iu-crimson);
+
+        .activity-description {
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .expand-icon {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .activity-header.active .expand-icon {
+            transform: rotate(180deg);
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Header Navigation -->
     <header class="header">
-        <nav class="nav container">
-            <a href="/" class="nav-logo">ELL</a>
+        <nav class="nav">
+            <a href="index.html" class="logo">ELL</a>
             <div class="nav-links">
-                <a href="/activities.html" class="nav-link">Activities</a>
-                <a href="/people.html" class="nav-link">People</a>
-                <a href="/about.html" class="nav-link">About</a>
-                <a href="/contact.html" class="nav-link">Contact</a>
+                <a href="activities.html">Activities</a>
+                <a href="people.html">People</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="container">
-        <h1 class="hero-title" style="color: var(--iu-crimson); margin: 2rem 0;">Our Activities</h1>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Activities</h1>
+            <p>Explore our presentations, workshops, and lecture series</p>
+        </div>
+    </section>
 
+    <!-- Main Content -->
+    <div class="main-content" style="grid-template-columns: 1fr;">
         <!-- Presentations Section -->
-        <section>
-            <h2 class="section-title">Research Presentations</h2>
-            <div class="grid grid-2">
-                <div class="card activity-card">
-                    <h3 class="card-title">Recent Advances in Econometric Learning</h3>
+        <section class="activity-section">
+            <div class="activity-header" onclick="toggleSection('presentations')">
+                <h2>Presentations</h2>
+                <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 9l-7 7-7-7"/>
+                </svg>
+            </div>
+            <div id="presentations" class="activity-content">
+                <div class="activity-item">
+                    <h3>Recent Advances in Econometric Learning</h3>
                     <p class="activity-date">December 2023</p>
-                    <p>A comprehensive presentation on the latest developments in econometric learning methodologies, featuring innovative approaches to statistical analysis and machine learning applications in economics.</p>
+                    <p class="activity-description">A presentation on the latest developments in econometric learning methodologies.</p>
                 </div>
-                <div class="card activity-card">
-                    <h3 class="card-title">Applications of Machine Learning in Economics</h3>
+                <div class="activity-item">
+                    <h3>Applications of Machine Learning in Economics</h3>
                     <p class="activity-date">November 2023</p>
-                    <p>An exploration of the intersection between machine learning and economic analysis, demonstrating practical applications and future research directions.</p>
+                    <p class="activity-description">Exploring the intersection of machine learning and economic analysis.</p>
                 </div>
             </div>
         </section>
 
         <!-- Workshops Section -->
-        <section>
-            <h2 class="section-title">Upcoming Workshops</h2>
-            <div class="grid grid-2">
-                <div class="card activity-card">
-                    <h3 class="card-title">Introduction to R Programming</h3>
-                    <p class="activity-date">January 2024</p>
-                    <p>A hands-on workshop covering the basics of R programming for economic analysis. Perfect for beginners and those looking to refresh their skills.</p>
-                    <button class="button" style="margin-top: 1rem;">Register Now</button>
-                </div>
-                <div class="card activity-card">
-                    <h3 class="card-title">Advanced Econometric Methods</h3>
-                    <p class="activity-date">February 2024</p>
-                    <p>An intensive workshop focused on advanced econometric techniques and their applications in real-world research scenarios.</p>
-                    <button class="button" style="margin-top: 1rem;">Register Now</button>
-                </div>
+        <section class="activity-section">
+            <div class="activity-header" onclick="toggleSection('workshops')">
+                <h2>Workshops</h2>
+                <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 9l-7 7-7-7"/>
+                </svg>
             </div>
-        </section>
-
-        <!-- Lecture Series Section -->
-        <section>
-            <h2 class="section-title">Current Lecture Series</h2>
-            <div class="grid grid-2">
-                <div class="card activity-card">
-                    <h3 class="card-title">Foundations of Econometrics</h3>
+            <div id="workshops" class="activity-content">
+                <div class="activity-item">
+                    <h3>Advanced Statistical Methods</h3>
                     <p class="activity-date">Spring 2024</p>
-                    <p>A comprehensive lecture series covering fundamental concepts in econometrics, including statistical inference, regression analysis, and time series modeling.</p>
+                    <p class="activity-description">Intensive workshop on modern statistical techniques in econometrics.</p>
                 </div>
-                <div class="card activity-card">
-                    <h3 class="card-title">Time Series Analysis</h3>
-                    <p class="activity-date">Summer 2024</p>
-                    <p>Advanced lectures focusing on time series analysis and forecasting methods, with practical applications using real economic data.</p>
+                <div class="activity-item">
+                    <h3>Data Analysis with R</h3>
+                    <p class="activity-date">Winter 2024</p>
+                    <p class="activity-description">Hands-on workshop focusing on econometric analysis using R.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Research Projects Section -->
-        <section>
-            <h2 class="section-title">Ongoing Research Projects</h2>
-            <div class="grid grid-3">
-                <div class="card activity-card">
-                    <h3 class="card-title">Economic Policy Analysis</h3>
-                    <p>Investigating the impact of monetary policy changes using advanced econometric methods.</p>
+        <!-- Lectures Section -->
+        <section class="activity-section">
+            <div class="activity-header" onclick="toggleSection('lectures')">
+                <h2>Lectures</h2>
+                <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 9l-7 7-7-7"/>
+                </svg>
+            </div>
+            <div id="lectures" class="activity-content">
+                <div class="activity-item">
+                    <h3>Foundations of Econometrics</h3>
+                    <p class="activity-date">Spring 2024</p>
+                    <p class="activity-description">A comprehensive lecture series covering fundamental concepts in econometrics.</p>
                 </div>
-                <div class="card activity-card">
-                    <h3 class="card-title">Machine Learning Applications</h3>
-                    <p>Developing new approaches to economic forecasting using machine learning techniques.</p>
-                </div>
-                <div class="card activity-card">
-                    <h3 class="card-title">International Trade Studies</h3>
-                    <p>Analyzing global trade patterns using novel statistical methodologies.</p>
+                <div class="activity-item">
+                    <h3>Time Series Analysis</h3>
+                    <p class="activity-date">Summer 2024</p>
+                    <p class="activity-description">Advanced lectures on time series analysis and forecasting methods.</p>
                 </div>
             </div>
         </section>
-    </main>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h3 class="footer-title">Econometric Learning Lab</h3>
-                    <p>Advancing economic research through innovative methodologies</p>
-                </div>
-                <div>
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul>
-                        <li><a href="/activities.html" class="footer-link">Activities</a></li>
-                        <li><a href="/people.html" class="footer-link">People</a></li>
-                        <li><a href="/about.html" class="footer-link">About</a></li>
-                        <li><a href="/contact.html" class="footer-link">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="footer-title">Connect</h3>
-                    <ul>
-                        <li><a href="#" class="footer-link">Twitter</a></li>
-                        <li><a href="#" class="footer-link">LinkedIn</a></li>
-                        <li><a href="#" class="footer-link">Email Newsletter</a></li>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Econometric Learning Lab</h3>
+                <p>Advancing economic research through innovative methodologies</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Econometric Learning Lab. All rights reserved.</p>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul class="footer-links">
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">LinkedIn</a></li>
+                    <li><a href="#" target="_blank">Email Newsletter</a></li>
+                </ul>
             </div>
         </div>
+
+        <div class="copyright">
+            <p>&copy; 2024 Econometric Learning Lab. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId);
+            const header = content.previousElementSibling;
+            
+            // Toggle active class on content
+            content.classList.toggle('active');
+            
+            // Toggle active class on header for icon rotation
+            header.classList.toggle('active');
+            
+            // Close other sections
+            document.querySelectorAll('.activity-content').forEach(section => {
+                if (section.id !== sectionId && section.classList.contains('active')) {
+                    section.classList.remove('active');
+                    section.previousElementSibling.classList.remove('active');
+                }
+            });
+        }
+
+        // Open the first section by default
+        document.addEventListener('DOMContentLoaded', () => {
+            toggleSection('presentations');
+        });
+    </script>
 </body>
 </html>
