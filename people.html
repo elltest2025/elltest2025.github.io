@@ -1,86 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ELL - People</title>
-  <link rel="stylesheet" href="main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People - Econometric Learning Lab (ELL)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header Navigation -->
+    <header>
+        <nav class="container nav-container">
+            <a href="index.html" class="logo">ELL</a>
+            <div class="nav-links">
+                <a href="activities.html">Activities</a>
+                <a href="people.html" style="color: var(--crimson);">People</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-  <!-- ===== HEADER ===== -->
-  <header class="site-header">
-    <div class="logo">Econometric Learning Lab (ELL)</div>
-    <nav class="site-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="people.html" class="active">People</a></li>
-        <li><a href="activities.html">Activities</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- ===== MAIN CONTENT ===== -->
-  <main class="people-content">
-    <h1>Our Team</h1>
-
-    <!-- Directors -->
-    <section>
-      <h2>Directors</h2>
-      <div class="people-grid">
-        <div class="person-card">
-          <img src="https://via.placeholder.com/150" alt="Director 1">
-          <h3>Person 1</h3>
-          <p>Director</p>
+    <!-- Page Title -->
+    <section class="hero" style="padding: 2rem 0;">
+        <div class="container">
+            <h1>Our Team</h1>
+            <p>Meet the researchers and collaborators at the Econometric Learning Lab</p>
         </div>
-        <div class="person-card">
-          <img src="https://via.placeholder.com/150" alt="Director 2">
-          <h3>Person 2</h3>
-          <p>Co-Director</p>
-        </div>
-      </div>
     </section>
 
-    <!-- Student Fellows -->
-    <section>
-      <h2>Student Fellows</h2>
-      <div class="people-grid">
-        <div class="person-card">
-          <img src="https://via.placeholder.com/150" alt="Fellow 1">
-          <h3>Student Fellow 1</h3>
-        </div>
-        <div class="person-card">
-          <img src="https://via.placeholder.com/150" alt="Fellow 2">
-          <h3>Student Fellow 2</h3>
-        </div>
-        <!-- Add more as needed -->
-      </div>
-    </section>
+    <!-- Main Content -->
+    <main class="container py-5">
+        <!-- Directors Section -->
+        <section class="mb-5">
+            <h2 class="mb-4">Directors</h2>
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="card">
+                    <img src="/api/placeholder/150/150" alt="Director 1" class="profile-image">
+                    <h3 class="mt-3">Director Name</h3>
+                    <p class="text-small" style="color: var(--crimson);">Lab Director</p>
+                    <p>Ph.D. in Economics, Research focus on econometric theory and applications.</p>
+                    <div class="mt-3">
+                        <a href="#" class="button button-ghost">View Profile</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/api/placeholder/150/150" alt="Director 2" class="profile-image">
+                    <h3 class="mt-3">Co-Director Name</h3>
+                    <p class="text-small" style="color: var(--crimson);">Co-Director</p>
+                    <p>Ph.D. in Economics, Specializing in machine learning applications in economics.</p>
+                    <div class="mt-3">
+                        <a href="#" class="button button-ghost">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Collaborators -->
-    <section>
-      <h2>Collaborators</h2>
-      <div class="people-grid">
-        <div class="person-card">
-          <img src="https://via.placeholder.com/150" alt="Collaborator 1">
-          <h3>Collaborator 1</h3>
+        <!-- Student Fellows Section -->
+        <section class="mb-5">
+            <h2 class="mb-4">Student Fellows</h2>
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="card">
+                    <img src="/api/placeholder/120/120" alt="Student 1" class="profile-image">
+                    <h3 class="mt-3">Student Name</h3>
+                    <p class="text-small" style="color: var(--crimson);">Ph.D. Candidate</p>
+                    <p>Research focus on applied econometrics and labor economics.</p>
+                </div>
+                <div class="card">
+                    <img src="/api/placeholder/120/120" alt="Student 2" class="profile-image">
+                    <h3 class="mt-3">Student Name</h3>
+                    <p class="text-small" style="color: var(--crimson);">Ph.D. Student</p>
+                    <p>Specializing in time series analysis and financial econometrics.</p>
+                </div>
+                <div class="card">
+                    <img src="/api/placeholder/120/120" alt="Student 3" class="profile-image">
+                    <h3 class="mt-3">Student Name</h3>
+                    <p class="text-small" style="color: var(--crimson);">Ph.D. Student</p>
+                    <p>Working on machine learning methods in econometrics.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collaborators Section -->
+        <section>
+            <h2 class="mb-4">Collaborators</h2>
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="card">
+                    <img src="/api/placeholder/120/120" alt="Collaborator 1" class="profile-image">
+                    <h3 class="mt-3">Collaborator Name</h3>
+                    <p class="text-small" style="color: var(--crimson);">Professor, University Name</p>
+                    <p>Research focus on econometric theory and causal inference.</p>
+                </div>
+                <div class="card">
+                    <img src="/api/placeholder/120/120" alt="Collaborator 2" class="profile-image">
+                    <h3 class="mt-3">Collaborator Name</h3>
+                    <p class="text-small" style="color: var(--crimson);">Associate Professor, University Name</p>
+                    <p>Specializing in panel data methods and microeconometrics.</p>
+                </div>
+                <div class="card">
+                    <img src="/api/placeholder/120/120" alt="Collaborator 3" class="profile-image">
+                    <h3 class="mt-3">Collaborator Name</h3>
+                    <p class="text-small" style="color: var(--crimson);">Research Scientist, Institution Name</p>
+                    <p>Expert in computational methods and high-dimensional statistics.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="people.html">People</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Department of Economics</li>
+                        <li>Indiana University</li>
+                        <li>Email: ell@indiana.edu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <p>&copy; 2024 Econometric Learning Lab, Indiana University. All rights reserved.</p>
+            </div>
         </div>
-        <div class="person-card">
-          <img src="https://via.placeholder.com/150" alt="Collaborator 2">
-          <h3>Collaborator 2</h3>
-        </div>
-        <!-- Add more as needed -->
-      </div>
-    </section>
+    </footer>
 
-  </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <p>&copy; 2024 Econometric Learning Lab (ELL). All rights reserved.</p>
-  </footer>
-
+    <style>
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block;
+            border: 3px solid var(--crimson);
+        }
+        
+        .text-small {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+    </style>
 </body>
 </html>
