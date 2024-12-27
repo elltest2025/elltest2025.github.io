@@ -1,65 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Econometric Learning Lab (ELL) - Home</title>
-  <link rel="stylesheet" href="main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Econometric Learning Lab (ELL) - Indiana University</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header Navigation -->
+    <header>
+        <nav class="container nav-container">
+            <a href="index.html" class="logo">ELL</a>
+            <div class="nav-links">
+                <a href="activities.html">Activities</a>
+                <a href="people.html">People</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-  <!-- ===== HEADER ===== -->
-  <header class="site-header">
-    <div class="logo">Econometric Learning Lab (ELL)</div>
-    <nav class="site-nav">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="people.html">People</a></li>
-        <li><a href="activities.html">Activities</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+        <div class="container">
+            <h1>Econometric Learning Lab</h1>
+            <p class="mb-4">Advancing the frontiers of econometric research and education at Indiana University</p>
+            <a href="about.html" class="button">Learn More</a>
+        </div>
+    </section>
 
-  <!-- ===== BANNER SECTION ===== -->
-  <section class="banner">
-    <h1>Welcome to the Econometric Learning Lab</h1>
-    <p>Advancing research in econometric methods and their applications.</p>
-  </section>
+    <!-- Main Content -->
+    <main class="container py-5">
+        <div class="card-grid">
+            <!-- Introduction Section -->
+            <div class="card" style="grid-column: span 2;">
+                <h2>Welcome to ELL</h2>
+                <p>The Econometric Learning Lab (ELL) is a research institution dedicated to advancing the understanding of economic phenomena through innovative econometric methods. Our interdisciplinary approach combines rigorous theoretical frameworks with cutting-edge empirical analysis.</p>
+                <p>Through collaboration with leading researchers and institutions worldwide, we strive to develop novel methodologies and insights that contribute to both academic knowledge and practical applications in economics.</p>
+            </div>
 
-  <!-- ===== MAIN CONTENT ===== -->
-  <main class="main-content">
-    <!-- Left column: Intro text -->
-    <div class="intro-text">
-      <h2>About the ELL</h2>
-      <p>
-        The Econometric Learning Lab (ELL) is dedicated to exploring cutting-edge techniques
-        in econometrics. Our mission is to foster collaboration, innovation, and knowledge
-        sharing among researchers, students, and professionals from various fields.
-      </p>
-      <p>
-        We host presentations, workshops, and lectures to engage the academic community and
-        further understanding of quantitative methods. Join us to learn, collaborate, and
-        contribute to the future of econometrics.
-      </p>
-    </div>
+            <!-- News Section -->
+            <div class="card">
+                <h2>Recent News</h2>
+                <div class="news-items">
+                    <div class="mb-3">
+                        <h3 class="mb-1">New Research Grant Awarded</h3>
+                        <p class="text-small">December 15, 2023</p>
+                        <p>ELL receives major funding for innovative econometric research project.</p>
+                    </div>
+                    <div class="mb-3">
+                        <h3 class="mb-1">Upcoming Workshop Series</h3>
+                        <p class="text-small">December 10, 2023</p>
+                        <p>Join us for our winter workshop series on advanced econometric methods.</p>
+                    </div>
+                    <div>
+                        <h3 class="mb-1">Latest Publication</h3>
+                        <p class="text-small">December 1, 2023</p>
+                        <p>New paper accepted in leading econometrics journal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Right column: Recent News -->
-    <aside class="recent-news">
-      <h2>Recent News</h2>
-      <ul>
-        <li><strong>Nov 1:</strong> Workshop on Time Series Analysis</li>
-        <li><strong>Oct 15:</strong> Guest Lecture by Prof. John Doe</li>
-        <li><strong>Sep 30:</strong> ELL Summer Research Recap</li>
-      </ul>
-    </aside>
-  </main>
+        <!-- Featured Research -->
+        <section class="mt-5">
+            <h2 class="mb-4">Featured Research</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Econometric Methods</h3>
+                    <p>Developing new approaches to economic data analysis and statistical inference.</p>
+                    <a href="#" class="button button-ghost">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Applied Economics</h3>
+                    <p>Applying cutting-edge methods to real-world economic problems and policy analysis.</p>
+                    <a href="#" class="button button-ghost">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Educational Resources</h3>
+                    <p>Creating innovative tools and materials for teaching econometrics.</p>
+                    <a href="#" class="button button-ghost">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <p>&copy; 2024 Econometric Learning Lab (ELL). All rights reserved.</p>
-  </footer>
-
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="people.html">People</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Department of Economics</li>
+                        <li>Indiana University</li>
+                        <li>Email: ell@indiana.edu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <p>&copy; 2024 Econometric Learning Lab, Indiana University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
