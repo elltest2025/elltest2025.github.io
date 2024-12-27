@@ -50,6 +50,7 @@
             padding: 1.5rem;
             margin-bottom: 1rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: right;
         }
 
         .activity-item h3 {
@@ -67,6 +68,17 @@
         .activity-description {
             color: #444;
             line-height: 1.6;
+        }
+
+        .activity-link {
+            color: #9b2242;
+            text-decoration: none;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+
+        .activity-link:hover {
+            text-decoration: underline;
         }
 
         .expand-icon {
@@ -98,13 +110,40 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Activities</h1>
-            <p>Explore our presentations, workshops, and lecture series</p>
+            <p>Explore our workshops, lectures, and presentations</p>
         </div>
     </section>
 
     <!-- Main Content -->
     <div class="main-content" style="grid-template-columns: 1fr;">
-        <!-- Presentations Section -->
+        <!-- 2024 Workshops & Courses -->
+        <section class="activity-section">
+            <div class="activity-header" onclick="toggleSection('workshops')">
+                <h2>Workshops & Courses</h2>
+                <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 9l-7 7-7-7"/>
+                </svg>
+            </div>
+            <div id="workshops" class="activity-content">
+                <div class="activity-item">
+                    <h3>Advanced Econometrics (ECON 724)</h3>
+                    <p class="activity-date">Spring 2024</p>
+                    <p class="activity-description">Instructor: Joon Y. Park</p>
+                </div>
+                <div class="activity-item">
+                    <h3>Economic Applications of Statistical Theory (ECON 672)</h3>
+                    <p class="activity-date">Spring 2024</p>
+                    <p class="activity-description">Instructor: Yoosoon Chang</p>
+                </div>
+                <div class="activity-item">
+                    <h3>Special Lecture Series</h3>
+                    <p class="activity-date">2024</p>
+                    <p class="activity-description">Guest Lecturer: Simon Sokbae Lee (Columbia University)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Presentations -->
         <section class="activity-section">
             <div class="activity-header" onclick="toggleSection('presentations')">
                 <h2>Presentations</h2>
@@ -114,59 +153,63 @@
             </div>
             <div id="presentations" class="activity-content">
                 <div class="activity-item">
-                    <h3>Recent Advances in Econometric Learning</h3>
-                    <p class="activity-date">December 2023</p>
-                    <p class="activity-description">A presentation on the latest developments in econometric learning methodologies.</p>
+                    <h3>SoFiE Conference Keynote</h3>
+                    <p class="activity-date">June 14-16, 2024</p>
+                    <p class="activity-description">Speaker: Yoosoon Chang</p>
+                    <p class="activity-description">Location: Rio de Janeiro</p>
+                    <a href="https://sites.google.com/view/sofie2024/home" target="_blank" class="activity-link">Conference Website</a>
                 </div>
+
                 <div class="activity-item">
-                    <h3>Applications of Machine Learning in Economics</h3>
-                    <p class="activity-date">November 2023</p>
-                    <p class="activity-description">Exploring the intersection of machine learning and economic analysis.</p>
+                    <h3>Models with Functional Variables: Theory</h3>
+                    <p class="activity-date">December 12-13, 2024</p>
+                    <p class="activity-description">Keynote Speaker: Joon Y. Park</p>
+                    <p class="activity-description">Location: City University of London, UK</p>
+                    <a href="https://www.dropbox.com/scl/fi/ovnpol0qc9v915lfj5mrr/WorkshopV4.pdf" target="_blank" class="activity-link">Program Details</a>
+                </div>
+
+                <div class="activity-item">
+                    <h3>Models with Functional Variables: Applications</h3>
+                    <p class="activity-date">December 12-13, 2024</p>
+                    <p class="activity-description">Keynote Speaker: Yoosoon Chang</p>
+                    <p class="activity-description">Location: City University of London, UK</p>
+                </div>
+
+                <div class="activity-item">
+                    <h3>Bristol Econometric Study Group</h3>
+                    <p class="activity-date">July 10-12, 2025</p>
+                    <p class="activity-description">Keynote Speaker: Yoosoon Chang</p>
+                    <p class="activity-description">Location: University of Bristol, UK</p>
+                </div>
+
+                <div class="activity-item">
+                    <h3>World Knowledge Forum (WKF)</h3>
+                    <p class="activity-date">September 9-11, 2025</p>
+                    <p class="activity-description">Invited Speaker: Yoosoon Chang</p>
+                    <p class="activity-description">Location: Seoul, Korea</p>
+                    <a href="https://www.wkforum.org/en/" target="_blank" class="activity-link">WKF Website</a>
+                </div>
+
+                <div class="activity-item">
+                    <h3>European Conferences of the Economics Community (EC)²</h3>
+                    <p class="activity-date">December 5-6, 2025</p>
+                    <p class="activity-description">Keynote Speaker: Yoosoon Chang</p>
+                    <p class="activity-description">Location: University of Lugano, Switzerland</p>
+                    <a href="https://sites.google.com/site/ecpower2/home-1" target="_blank" class="activity-link">Conference Website</a>
                 </div>
             </div>
         </section>
 
-        <!-- Workshops Section -->
+        <!-- Publications Section -->
         <section class="activity-section">
-            <div class="activity-header" onclick="toggleSection('workshops')">
-                <h2>Workshops</h2>
+            <div class="activity-header" onclick="toggleSection('publications')">
+                <h2>Publications</h2>
                 <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M19 9l-7 7-7-7"/>
                 </svg>
             </div>
-            <div id="workshops" class="activity-content">
-                <div class="activity-item">
-                    <h3>Advanced Statistical Methods</h3>
-                    <p class="activity-date">Spring 2024</p>
-                    <p class="activity-description">Intensive workshop on modern statistical techniques in econometrics.</p>
-                </div>
-                <div class="activity-item">
-                    <h3>Data Analysis with R</h3>
-                    <p class="activity-date">Winter 2024</p>
-                    <p class="activity-description">Hands-on workshop focusing on econometric analysis using R.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Lectures Section -->
-        <section class="activity-section">
-            <div class="activity-header" onclick="toggleSection('lectures')">
-                <h2>Lectures</h2>
-                <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M19 9l-7 7-7-7"/>
-                </svg>
-            </div>
-            <div id="lectures" class="activity-content">
-                <div class="activity-item">
-                    <h3>Foundations of Econometrics</h3>
-                    <p class="activity-date">Spring 2024</p>
-                    <p class="activity-description">A comprehensive lecture series covering fundamental concepts in econometrics.</p>
-                </div>
-                <div class="activity-item">
-                    <h3>Time Series Analysis</h3>
-                    <p class="activity-date">Summer 2024</p>
-                    <p class="activity-description">Advanced lectures on time series analysis and forecasting methods.</p>
-                </div>
+            <div id="publications" class="activity-content">
+                <!-- Add publications here when available -->
             </div>
         </section>
     </div>
@@ -226,7 +269,7 @@
 
         // Open the first section by default
         document.addEventListener('DOMContentLoaded', () => {
-            toggleSection('presentations');
+            toggleSection('workshops');
         });
     </script>
 </body>
