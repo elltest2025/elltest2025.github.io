@@ -12,53 +12,48 @@ body {
     background-color: #fff;
 }
 
-/* Header and Banner styles */
-.banner-container {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-
-.banner-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
+/* Header and Navigation */
 .header {
-    background-color: rgba(51, 51, 51, 0.9);
+    background-color: rgba(51, 51, 51, 0.95);
     color: white;
-    padding: 1rem 2rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
+    font-size: 1.2rem;
     color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
-    align-items: center;
 }
 
-/* Dropdown Menu Styles */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Dropdown styles */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -67,14 +62,15 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: white;
     min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     z-index: 1;
     border-radius: 4px;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
+    margin-top: 0.5rem;
 }
 
 .dropdown:hover .dropdown-content {
@@ -84,147 +80,120 @@ body {
 .dropdown-content a {
     color: #333 !important;
     padding: 12px 16px;
-    text-decoration: none;
     display: block;
-    text-align: left;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #f5f5f5;
 }
 
-.nav-links a {
+/* Banner */
+.banner {
+    background-color: #990000; /* Crimson */
+    position: relative;
     color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: opacity 0.3s;
-    padding: 0.5rem 1rem;
+    padding: 6rem 2rem 3rem;
+    background-image: url('../images/banner.png');
+    background-size: cover;
+    background-position: center;
 }
 
-.nav-links a:hover {
-    opacity: 0.8;
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(153, 0, 0, 0.85); /* Crimson overlay */
+    z-index: 1;
 }
 
-/* Hero section */
-.hero {
-    background-color: #9b2242;
-    color: white;
-    padding: 4rem 2rem;
-    text-align: left;
-    margin-top: -4px; /* Fix potential gap with banner */
-}
-
-.hero-content {
+.banner-content {
+    position: relative;
+    z-index: 2;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.hero h1 {
+.banner h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
-.hero p {
+.banner p {
     font-size: 1.25rem;
     opacity: 0.9;
 }
 
-/* Main content area */
-.main-content {
+/* Main content layout */
+.container {
     max-width: 1200px;
-    margin: 3rem auto;
+    margin: 2rem auto;
     padding: 0 2rem;
-}
-
-/* Section styles */
-.section-title {
-    text-align: center;
-    margin: 3rem 0;
-    font-size: 2rem;
-    color: #333;
-}
-
-/* Activity page specific styles */
-.activity-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    margin: 2rem 0;
 }
 
-.activity-card {
+/* Main content styles */
+.main-content {
     background: white;
+    padding: 2rem;
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.activity-card:hover {
-    transform: translateY(-5px);
+.main-content h2 {
+    color: #990000; /* Crimson */
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
 }
 
-.activity-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.main-content p {
+    margin-bottom: 1.5rem;
 }
 
-.activity-content {
-    padding: 1.5rem;
+/* Sidebar styles */
+.sidebar {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    height: fit-content;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.activity-title {
-    font-size: 1.25rem;
+.sidebar h2 {
+    color: #990000; /* Crimson */
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.news-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.news-item h3 {
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
     color: #333;
 }
 
-.activity-date {
+.news-date {
     color: #666;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-/* People page specific styles */
-.people-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
-}
-
-.person-card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.person-card:hover {
-    transform: translateY(-5px);
-}
-
-.person-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.person-info {
-    padding: 1.5rem;
-}
-
-.person-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.person-title {
-    color: #666;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 
 /* Footer */
@@ -240,12 +209,17 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .footer-section h3 {
     margin-bottom: 1rem;
     font-size: 1.2rem;
+}
+
+.footer-section p {
+    opacity: 0.8;
+    margin-bottom: 1rem;
 }
 
 .footer-links {
@@ -260,7 +234,7 @@ body {
     color: white;
     text-decoration: none;
     opacity: 0.8;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease;
 }
 
 .footer-links a:hover {
@@ -277,13 +251,8 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .banner-container {
-        height: 200px;
-    }
-    
-    .header {
-        position: relative;
-        background-color: #333;
+    .container {
+        grid-template-columns: 1fr;
     }
     
     .nav {
@@ -294,33 +263,37 @@ body {
     .nav-links {
         flex-direction: column;
         width: 100%;
+        text-align: center;
     }
     
     .dropdown-content {
         position: static;
         transform: none;
-        box-shadow: none;
         margin-top: 0.5rem;
+        width: 100%;
+    }
+    
+    .banner {
+        padding: 5rem 1rem 2rem;
+    }
+    
+    .banner h1 {
+        font-size: 2rem;
     }
     
     .footer-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        text-align: center;
     }
 }
 
 @media (max-width: 480px) {
-    .hero {
-        padding: 2rem 1rem;
+    .banner h1 {
+        font-size: 1.75rem;
     }
     
-    .main-content {
-        padding: 0 1rem;
-        margin: 2rem auto;
-    }
-    
-    .activity-grid,
-    .people-grid {
-        grid-template-columns: 1fr;
+    .main-content,
+    .sidebar {
+        padding: 1.5rem;
     }
 }
