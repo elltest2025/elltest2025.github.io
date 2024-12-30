@@ -12,13 +12,28 @@ body {
     background-color: #fff;
 }
 
-/* Header styles */
+/* Header and Banner styles */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .header {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.9);
     color: white;
     padding: 1rem 2rem;
-    position: sticky;
+    position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
 }
 
@@ -40,6 +55,42 @@ body {
 .nav-links {
     display: flex;
     gap: 2rem;
+    align-items: center;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333 !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
 }
 
 .nav-links a {
@@ -47,6 +98,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: opacity 0.3s;
+    padding: 0.5rem 1rem;
 }
 
 .nav-links a:hover {
@@ -59,6 +111,7 @@ body {
     color: white;
     padding: 4rem 2rem;
     text-align: left;
+    margin-top: -4px; /* Fix potential gap with banner */
 }
 
 .hero-content {
@@ -81,100 +134,97 @@ body {
     max-width: 1200px;
     margin: 3rem auto;
     padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
 }
 
-.content-section {
-    margin-bottom: 2rem;
-}
-
-.content-section h2 {
+/* Section styles */
+.section-title {
+    text-align: center;
+    margin: 3rem 0;
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    color: #333;
 }
 
-/* Sidebar / News section */
-.sidebar {
-    background-color: #f8f8f8;
-    padding: 1.5rem;
-    border-radius: 8px;
-}
-
-.sidebar h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.news-item {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #eee;
-}
-
-.news-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.news-item h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.news-date {
-    color: #666;
-    font-size: 0.9rem;
-}
-
-/* People/Team section */
-.team-grid {
+/* Activity page specific styles */
+.activity-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 
-.team-member {
+.activity-card {
     background: white;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.team-member img {
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-image {
     width: 100%;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
 }
 
-.team-member-info {
+.activity-content {
     padding: 1.5rem;
 }
 
-.team-member h3 {
+.activity-title {
+    font-size: 1.25rem;
     margin-bottom: 0.5rem;
+    color: #333;
 }
 
-.team-member p {
+.activity-date {
     color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
 }
 
-/* Collaborators section */
-.collaborators-grid {
+/* People page specific styles */
+.people-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 
-.collaborator-card {
+.person-card {
     background: white;
-    padding: 1.5rem;
     border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.person-card:hover {
+    transform: translateY(-5px);
+}
+
+.person-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.person-info {
+    padding: 1.5rem;
+}
+
+.person-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.person-title {
+    color: #666;
+    margin-bottom: 1rem;
 }
 
 /* Footer */
@@ -227,21 +277,35 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .main-content {
-        grid-template-columns: 1fr;
+    .banner-container {
+        height: 200px;
     }
     
-    .hero h1 {
-        font-size: 2rem;
+    .header {
+        position: relative;
+        background-color: #333;
+    }
+    
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .dropdown-content {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        margin-top: 0.5rem;
     }
     
     .footer-content {
         grid-template-columns: 1fr;
         gap: 2rem;
-    }
-    
-    .nav-links {
-        gap: 1rem;
     }
 }
 
@@ -255,7 +319,8 @@ body {
         margin: 2rem auto;
     }
     
-    .team-grid {
+    .activity-grid,
+    .people-grid {
         grid-template-columns: 1fr;
     }
 }
