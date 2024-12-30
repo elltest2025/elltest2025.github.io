@@ -4,75 +4,265 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELL - Econometric Learning Lab</title>
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="description" content="Advancing the frontiers of econometric research and education">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Header and Navigation */
+        .header {
+            background-color: rgba(51, 51, 51, 0.9);
+            color: white;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* Banner */
+        .banner {
+            background-color: #9b2242;
+            color: white;
+            padding: 6rem 2rem 3rem;
+        }
+
+        .banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .banner p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+
+        /* Main content layout */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Main content styles */
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .main-content h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .news-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .news-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Banner and Header -->
-    <div class="banner-container">
-        <img src="images/banner.png" alt="ELL Banner" class="banner-image">
-        <header class="header">
-            <nav class="nav">
-                <a href="index.html" class="logo">Econometric Learning Lab (ELL@IU)</a>
-                <div class="nav-links">
-                    <!-- Activities Dropdown -->
-                    <div class="dropdown">
-                        <a href="#" class="dropbtn">Activities</a>
-                        <div class="dropdown-content">
-                            <a href="workshops.html">Workshops & Courses</a>
-                            <a href="presentations.html">Presentations</a>
-                            <a href="publications.html">Publications</a>
-                        </div>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">Econometric Learning Lab (ELL@IU)</a>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="#">Activities</a>
+                    <div class="dropdown-content">
+                        <a href="workshops.html">Workshops & Courses</a>
+                        <a href="presentations.html">Presentations</a>
+                        <a href="publications.html">Publications</a>
                     </div>
-                    <!-- People Dropdown -->
-                    <div class="dropdown">
-                        <a href="#" class="dropbtn">People</a>
-                        <div class="dropdown-content">
-                            <a href="directors.html">Directors</a>
-                            <a href="students.html">Student Fellows</a>
-                            <a href="collaborators.html">Collaborators</a>
-                        </div>
-                    </div>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
                 </div>
-            </nav>
-        </header>
-    </div>
+                <div class="dropdown">
+                    <a href="#">People</a>
+                    <div class="dropdown-content">
+                        <a href="directors.html">Directors</a>
+                        <a href="students.html">Student Fellows</a>
+                        <a href="collaborators.html">Collaborators</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
             <h1>Econometric Learning Lab</h1>
             <p>Advancing the frontiers of econometric research and education</p>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Left Column - Main Content -->
-        <main class="content-section">
+    <!-- Main Content Container -->
+    <div class="container">
+        <!-- Main Content -->
+        <main class="main-content">
             <h2>Welcome to ELL</h2>
-            <p>We are excited to announce the establishment of the Econometrics Learning Lab (ELL) in the Department of Economics at Indiana University. The ELL aims to develop and disseminate innovative methodologies and econometric theories specifically designed for analyzing large-dimensional economic data. 
-            In today's data-rich environment, there is an urgent need for tools that can effectively handle complex datasets we encounter in economic applications, and the ELL is poised to meet this demand.</p>
+            <p>We are excited to announce the establishment of the Econometrics Learning Lab (ELL) in the Department of Economics at Indiana University. The ELL aims to develop and disseminate innovative methodologies and econometric theories specifically designed for analyzing large-dimensional economic data. In today's data-rich environment, there is an urgent need for tools that can effectively handle complex datasets we encounter in economic applications, and the ELL is poised to meet this demand.</p>
+            
+            <p>The primary goal of the ELL is to equip faculty and graduate students with the necessary skills and knowledge to utilize machine learning tools for economic data analysis. The Lab offers a supportive environment where participants can learn various new methodologies while leveraging their theoretical backgrounds. Regular training sessions will be organized to help faculty and students acquire the skills needed to implement standard machine learning tools effectively. Faculty associates and graduate student assistants are also available to provide consultation for those working with large-dimensional data in their research at more advanced levels.</p>
 
-            <p>The primary goal of the ELL is to equip faculty and graduate students with the necessary skills and knowledge to utilize machine learning tools for economic data analysis. 
-                The Lab offers a supportive environment where participants can learn various new methodologies while leveraging their theoretical backgrounds. 
-                Regular training sessions will be organized to help faculty and students acquire the skills needed to implement standard machine learning tools effectively. 
-                Faculty associates and graduate student assistants are also available to provide consultation for those working with large-dimensional data in their research at more advanced levels.
-            </p>
-
-            <p>From August 19 to 23, the ELL hosted its inaugural workshop, Machine Learning in Economics, attended by six faculty members and thirteen graduate students. 
-                This workshop included two daily sessions: morning lectures covering the theoretical foundations of various machine learning methodologies and afternoon sessions focused on practical applications in empirical research. 
-                The workshop covered a range of topics, including large dimensional regression techniques such as PCA, Ridge, and Lasso; reproducing kernel Hilbert space and kernel methods; support vector machines, including linear and kernel tricks; tree-based approaches such as random forests with and without resampling and boosting; and neural networks in both vanilla and recurrent forms. 
-                Participants were encouraged to bring their own laptops and had some working knowledge of programming in MATLAB and Python. 
-                A short session on the basics of both programming languages was included to support all attendees.
-            </p>
+            <p>From August 19 to 23, the ELL hosted its inaugural workshop, Machine Learning in Economics, attended by six faculty members and thirteen graduate students. This workshop included two daily sessions: morning lectures covering the theoretical foundations of various machine learning methodologies and afternoon sessions focused on practical applications in empirical research. The workshop covered a range of topics, including large dimensional regression techniques such as PCA, Ridge, and Lasso; reproducing kernel Hilbert space and kernel methods; support vector machines, including linear and kernel tricks; tree-based approaches such as random forests with and without resampling and boosting; and neural networks in both vanilla and recurrent forms. Participants were encouraged to bring their own laptops and had some working knowledge of programming in MATLAB and Python. A short session on the basics of both programming languages was included to support all attendees.</p>
             
             <p>The ELL is committed to fostering collaborative research and sharing ideas among faculty and students to develop new methodologies and econometric theories tailored for economic analysis. We look forward to the contributions and advancements that will emerge from the Lab and our ongoing commitment to excellence in econometric research and education.</p>
         </main>
 
-        <!-- Right Column - News Sidebar -->
+        <!-- Sidebar -->
         <aside class="sidebar">
             <h2>Recent News</h2>
             <div class="news-item">
@@ -93,13 +283,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <!-- Lab Info -->
             <div class="footer-section">
                 <h3>Econometric Learning Lab</h3>
                 <p>Advancing economic research through innovative methodologies</p>
             </div>
-
-            <!-- Quick Links -->
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
@@ -110,8 +297,6 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-
-            <!-- Connect -->
             <div class="footer-section">
                 <h3>Connect</h3>
                 <ul class="footer-links">
@@ -120,8 +305,6 @@
                 </ul>
             </div>
         </div>
-
-        <!-- Copyright -->
         <div class="copyright">
             <p>&copy; 2024 Econometric Learning Lab. All rights reserved.</p>
         </div>
